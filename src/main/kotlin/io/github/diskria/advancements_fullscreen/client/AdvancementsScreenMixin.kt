@@ -169,7 +169,7 @@ abstract class AdvancementsScreenMixin(@Origin val screen: AdvancementsScreen) {
         method = ["repositionElements()V"],
         at = [At(value = "CONSTANT", args = ["intValue=${AdvancementsScreen.WINDOW_HEIGHT}"])]
     )
-    fun overrideWindowY(original: Int): Int  = fullscreenWindowHeight
+    fun overrideWindowY(original: Int): Int = fullscreenWindowHeight
 
     @ModifyExpressionValue(
         method = ["mouseClicked(Lnet/minecraft/client/input/MouseButtonEvent;Z)Z"],

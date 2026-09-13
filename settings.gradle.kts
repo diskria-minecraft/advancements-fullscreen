@@ -8,3 +8,9 @@ pluginManagement {
 }
 
 rootProject.name = "advancements_fullscreen"
+
+dependencyResolutionManagement {
+    repositories {
+        mavenLocal()
+    }
+}

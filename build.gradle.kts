@@ -19,11 +19,7 @@ loom {
 
 lapis {
     uniqueModPrefix = "$modId$"
-    sourceSets {
-        register("main") {
-            mixinConfig = file("src/main/resources/$modId.mixins.json")
-        }
-    }
+    mixinConfig = file("src/main/resources/$modId.mixins.json")
 }
 
 dependencies {

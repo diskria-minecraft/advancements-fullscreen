@@ -1,7 +1,7 @@
 [versions]
 minecraft = "26.2"
 kotlin = "2.4.0"
-lapis = "0.10.0"
+lapis = "0.10.0-SNAPSHOT"
 
 fabric-loom = "1.17-SNAPSHOT"
 fabric-loader = "0.19.5"
