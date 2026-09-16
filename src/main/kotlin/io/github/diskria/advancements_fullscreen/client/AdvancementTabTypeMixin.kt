@@ -4,7 +4,7 @@ import com.llamalad7.mixinextras.injector.ModifyExpressionValue
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation
 import com.llamalad7.mixinextras.sugar.Local
-import com.mojang.blaze3d.pipeline.RenderPipeline
+import com.mojang.renderpearl.api.pipeline.RenderPipeline
 import io.github.diskria.lapis.annotations.Env
 import io.github.diskria.lapis.annotations.KMixin
 import io.github.diskria.lapis.annotations.Origin
@@ -41,7 +41,7 @@ abstract class AdvancementTabTypeMixin(@Origin val type: AdvancementTabType) {
         at = [At(
             value = "INVOKE",
             target = "Lnet/minecraft/client/gui/GuiGraphicsExtractor;" +
-                "blitSprite(Lcom/mojang/blaze3d/pipeline/RenderPipeline;Lnet/minecraft/resources/Identifier;IIII)V",
+                "blitSprite(Lcom/mojang/renderpearl/api/pipeline/RenderPipeline;Lnet/minecraft/resources/Identifier;IIII)V",
         )]
     )
     fun fixSpriteAlignment(

@@ -1,7 +1,7 @@
 package io.github.diskria.advancements_fullscreen.client
 
-import com.mojang.blaze3d.pipeline.RenderPipeline
 import com.mojang.blaze3d.platform.NativeImage
+import com.mojang.renderpearl.api.pipeline.RenderPipeline
 import net.minecraft.client.gui.GuiGraphicsExtractor
 import net.minecraft.client.gui.screens.advancements.AdvancementsScreen
 import net.minecraft.client.renderer.texture.SpriteContents

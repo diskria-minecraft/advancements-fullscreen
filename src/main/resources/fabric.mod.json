@@ -32,7 +32,7 @@
   "accessWidener": "advancements_fullscreen.classtweaker",
   "depends": {
     "fabricloader": ">=0.19.5",
-    "minecraft": ">=26.2",
+    "minecraft": ">=26.3",
     "java": ">=25",
     "fabric-language-kotlin": ">=1.13.12+kotlin.2.4.0"
   }
