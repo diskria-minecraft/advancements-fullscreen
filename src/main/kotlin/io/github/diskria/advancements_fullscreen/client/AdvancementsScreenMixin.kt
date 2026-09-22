@@ -23,7 +23,7 @@ import java.util.function.Consumer
 import javax.lang.model.element.Modifier.FINAL
 import javax.lang.model.element.Modifier.PRIVATE
 
-@KMixin(AdvancementsScreen::class, Env.Client)
+@KMixin(AdvancementsScreen::class, Side.Client)
 abstract class AdvancementsScreenMixin(@Origin private val screen: AdvancementsScreen) {
 
     @Extension

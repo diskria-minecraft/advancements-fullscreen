@@ -1,16 +1,16 @@
 package io.github.diskria.advancements_fullscreen.client
 
 import com.llamalad7.mixinextras.injector.ModifyExpressionValue
-import io.github.diskria.lapis.annotations.Env
 import io.github.diskria.lapis.annotations.KMixin
 import io.github.diskria.lapis.annotations.KShadow
+import io.github.diskria.lapis.annotations.Side
 import net.minecraft.client.gui.screens.advancements.AdvancementTab
 import net.minecraft.client.gui.screens.advancements.AdvancementsScreen
 import org.spongepowered.asm.mixin.injection.At
 import javax.lang.model.element.Modifier.PRIVATE
 import javax.lang.model.element.Modifier.PUBLIC
 
-@KMixin(AdvancementTab::class, Env.Client)
+@KMixin(AdvancementTab::class, Side.Client)
 abstract class AdvancementTabMixin {
 
     private val advancementsScreen: AdvancementsScreen get() = getScreen()

@@ -1,15 +1,15 @@
 package io.github.diskria.advancements_fullscreen.client
 
 import com.llamalad7.mixinextras.sugar.Local
-import io.github.diskria.lapis.annotations.Env
 import io.github.diskria.lapis.annotations.KMixin
+import io.github.diskria.lapis.annotations.Side
 import net.minecraft.client.Minecraft
 import net.minecraft.client.gui.screens.advancements.AdvancementWidget
 import net.minecraft.client.gui.screens.advancements.AdvancementsScreen
 import org.spongepowered.asm.mixin.injection.At
 import org.spongepowered.asm.mixin.injection.ModifyVariable
 
-@KMixin(AdvancementWidget::class, Env.Client)
+@KMixin(AdvancementWidget::class, Side.Client)
 abstract class AdvancementWidgetMixin {
 
     private val advancementsScreen: AdvancementsScreen?

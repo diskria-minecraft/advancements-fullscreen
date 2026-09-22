@@ -5,9 +5,9 @@ import com.llamalad7.mixinextras.injector.wrapoperation.Operation
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation
 import com.llamalad7.mixinextras.sugar.Local
 import com.mojang.renderpearl.api.pipeline.RenderPipeline
-import io.github.diskria.lapis.annotations.Env
 import io.github.diskria.lapis.annotations.KMixin
 import io.github.diskria.lapis.annotations.Origin
+import io.github.diskria.lapis.annotations.Side
 import net.minecraft.client.Minecraft
 import net.minecraft.client.gui.GuiGraphicsExtractor
 import net.minecraft.client.gui.screens.advancements.AdvancementTabType
@@ -16,7 +16,7 @@ import net.minecraft.client.gui.screens.advancements.AdvancementsScreen
 import net.minecraft.resources.Identifier
 import org.spongepowered.asm.mixin.injection.At
 
-@KMixin(AdvancementTabType::class, Env.Client)
+@KMixin(AdvancementTabType::class, Side.Client)
 abstract class AdvancementTabTypeMixin(@Origin private val type: AdvancementTabType) {
 
     private val advancementsScreen: AdvancementsScreen?
