@@ -24,7 +24,7 @@ import javax.lang.model.element.Modifier.FINAL
 import javax.lang.model.element.Modifier.PRIVATE
 
 @KMixin(AdvancementsScreen::class, Env.Client)
-abstract class AdvancementsScreenMixin(@Origin val screen: AdvancementsScreen) {
+abstract class AdvancementsScreenMixin(@Origin private val screen: AdvancementsScreen) {
 
     @Extension
     val fullscreenHorizontalMargin: Int

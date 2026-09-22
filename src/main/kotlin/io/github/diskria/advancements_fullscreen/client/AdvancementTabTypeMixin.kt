@@ -17,7 +17,7 @@ import net.minecraft.resources.Identifier
 import org.spongepowered.asm.mixin.injection.At
 
 @KMixin(AdvancementTabType::class, Env.Client)
-abstract class AdvancementTabTypeMixin(@Origin val type: AdvancementTabType) {
+abstract class AdvancementTabTypeMixin(@Origin private val type: AdvancementTabType) {
 
     private val advancementsScreen: AdvancementsScreen?
         get() = Minecraft.getInstance().gui.screen() as? AdvancementsScreen
@@ -46,7 +46,7 @@ abstract class AdvancementTabTypeMixin(@Origin val type: AdvancementTabType) {
     )
     fun fixSpriteAlignment(
         instance: GuiGraphicsExtractor,
-        renderPipeline: RenderPipeline, sprite: Identifier, x: Int, y: Int, width: Int, height: Int,
+        renderPipeline: RenderPipeline, location: Identifier, x: Int, y: Int, width: Int, height: Int,
         original: Operation<Void>,
         @Local(name = ["sprites"]) sprites: Sprites
     ) {
@@ -61,7 +61,7 @@ abstract class AdvancementTabTypeMixin(@Origin val type: AdvancementTabType) {
                 tabPosition + tabSize == screenSize - screenMargin -> sprites.last()
                 else -> sprites.middle()
             }
-        } ?: sprite
+        } ?: location
         original.call(instance, renderPipeline, sprite, x, y, width, height)
     }
 }
