@@ -77,15 +77,11 @@ abstract class AdvancementsScreenMixin(@Origin private val screen: AdvancementsS
             target = "Lnet/minecraft/client/gui/screens/advancements/AdvancementTab;scroll(DD)V"
         )]
     )
-    fun invertScrollWhenShiftDown(
-        instance: AdvancementTab,
-        scrollX: Double, scrollY: Double,
-        original: Operation<Void>,
-    ) {
+    fun invertScrollWhenShiftDown(instance: AdvancementTab, x: Double, y: Double, original: Operation<Void>) {
         if (Minecraft.getInstance().hasShiftDown()) {
-            original.call(instance, scrollY, 0.toDouble())
+            original.call(instance, y, 0.toDouble())
         } else {
-            original.call(instance, scrollX, scrollY)
+            original.call(instance, x, y)
         }
     }
 
@@ -140,7 +136,7 @@ abstract class AdvancementsScreenMixin(@Origin private val screen: AdvancementsS
     )
     fun hideFooter(
         instance: HeaderAndFooterLayout,
-        element: LayoutElement,
+        child: LayoutElement,
         original: Operation<LayoutElement>,
     ): LayoutElement? = null
 

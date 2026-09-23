@@ -21,13 +21,13 @@ abstract class AdvancementWidgetMixin {
         at = [At(value = "STORE")]
     )
     fun fixHoverOutOfScreen(
-        original: Boolean,
+        topSide: Boolean,
         @Local(name = ["titleTop"]) titleTop: Int,
         @Local(name = ["titleBarBottom"]) titleBarBottom: Int,
         @Local(name = ["descriptionTextHeight"]) descriptionTextHeight: Int,
         @Local(name = ["descriptionHeight"]) descriptionHeight: Int,
     ): Boolean {
-        val screen = advancementsScreen ?: return original
+        val screen = advancementsScreen ?: return topSide
         val hoverBottom = titleBarBottom + descriptionHeight
         val hoverTop = titleTop - descriptionTextHeight + 1
         val backgroundTop = descriptionHeight - descriptionTextHeight
